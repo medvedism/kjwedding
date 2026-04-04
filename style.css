@@ -1,0 +1,509 @@
+/* ==========================================================
+   Joe & Ksenia's Wedding — Style Sheet
+
+   CUSTOMISATION: Change fonts and colours using these
+   CSS custom properties (variables) below.
+   ========================================================== */
+
+/* ==========================================================
+   Font faces
+   ========================================================== */
+@font-face {
+  font-family: 'Canela Text';
+  src: url('fonts/CanelaText-Light-Desktop.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Canela Text';
+  src: url('fonts/CanelaText-Regular-Desktop.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Canela Text';
+  src: url('fonts/CanelaText-RegularItalic-Desktop.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Canela Text';
+  src: url('fonts/CanelaText-Medium-Desktop.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Canela Text';
+  src: url('fonts/CanelaText-Bold-Desktop.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* --- Fonts --- */
+  --font-body: 'Canela Text', Georgia, ui-serif, serif;
+  --font-heading: 'Canela Text', Georgia, ui-serif, serif;
+
+  /* --- Colours --- */
+  --color-text: #6a2133;
+  --color-pink: #ff4c92;
+  --color-blue: #26b7dd;
+  --color-orange: #ff7d00;
+  --color-bg: #fdf4df;
+  --color-link: inherit;
+  --color-hr: rgba(55, 53, 47, 0.09);
+  --color-muted: rgba(55, 53, 47, 0.6);
+
+  /* --- Layout --- */
+  --max-width: 1000px;
+  --spacing: 1.5rem;
+}
+
+/* ==========================================================
+   Reset & Base
+   ========================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-print-color-adjust: exact;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background: var(--color-bg);
+  font-size: 19px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================
+   Page container
+   ========================================================== */
+.page {
+  max-width: var(--max-width);
+  margin: 2em auto;
+  padding: 0 var(--spacing);
+  padding-bottom: 180px;
+}
+
+/* ==========================================================
+   Typography
+   ========================================================== */
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+h1 { font-size: 56px; margin-top: 1.875rem; font-weight: 300; text-align: center; }
+h2 { font-size: 34px; margin-top: 120px; margin-bottom: 40px; font-weight: 400; }
+h3 {
+  font-size: 21px;
+  font-style: italic;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.accent-heading {
+  color: var(--color-text);
+}
+
+.section-heading {
+  color: var(--color-text);
+  text-align: center;
+}
+
+p {
+  text-align: left;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
+
+a, a:visited {
+  color: var(--color-link);
+  text-decoration: underline;
+  text-decoration-thickness: 0.5px;
+  text-underline-offset: 4px;
+  text-decoration-color: rgba(0, 0, 0, 0.3);
+}
+
+hr {
+  background: transparent;
+  display: block;
+  width: 100%;
+  height: 1px;
+  visibility: visible;
+  border: none;
+  border-bottom: 1px solid var(--color-hr);
+  margin: 0.5em 0 1em;
+}
+
+u {
+  text-decoration: underline;
+  text-decoration-thickness: 0.5px;
+  text-underline-offset: 4px;
+  text-decoration-color: rgba(0, 0, 0, 0.3);
+}
+
+ul {
+  padding-inline-start: 1.7em;
+  margin-block-start: 0.6em;
+  margin-block-end: 0.6em;
+}
+
+ul > li {
+  list-style: disc;
+  padding-left: 0.1em;
+  margin-bottom: 0.3em;
+}
+
+strong {
+  font-weight: 500;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+figure {
+  margin: 1.25em 0;
+}
+
+/* ==========================================================
+   Sticky Header
+   ========================================================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--color-bg);
+}
+
+.site-header__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 16px var(--spacing);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-header__title {
+  font-size: 21px;
+  margin: 0;
+}
+
+.site-nav {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.site-nav a {
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.site-nav a:hover {
+  opacity: 1;
+}
+
+/* Hamburger button — hidden on desktop */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--color-text);
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+/* ==========================================================
+   Hero section
+   ========================================================== */
+.hero {
+  padding-top: 100px;
+  margin-bottom: 160px;
+}
+
+.hero-heading {
+  margin-top: 0;
+  margin-bottom: 0.75em;
+}
+
+/* ==========================================================
+   Photo grid (3 columns)
+   ========================================================== */
+.photo-grid {
+  display: flex;
+  gap: 46px;
+  margin: 1.5em 0;
+}
+
+.photo-grid figure {
+  flex: 1 1 0;
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.photo-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+/* ==========================================================
+   Wide image
+   ========================================================== */
+.wide-image {
+  margin: 1.5em 0;
+}
+
+.wide-image img {
+  width: 100%;
+  border-radius: 2px;
+}
+
+.video-embed {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+}
+
+/* ==========================================================
+   Two-column layout (label + content)
+   ========================================================== */
+.two-col {
+  display: flex;
+  gap: 46px;
+  margin: 1em 0;
+}
+
+.two-col__label {
+  flex: 0 0 25%;
+  min-width: 0;
+}
+
+.two-col__content {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+/* ==========================================================
+   Gifts row
+   ========================================================== */
+.gifts-row {
+  display: flex;
+  gap: 46px;
+  align-items: flex-start;
+}
+
+.gifts-text {
+  flex: 0 0 68.75%;
+}
+
+.gifts-image {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.gifts-image img {
+  max-width: 192px;
+}
+
+/* ==========================================================
+   Schedule list
+   ========================================================== */
+.location-subtitle {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.qr-container {
+  display: inline-block;
+  padding: 20px;
+  border: 1px solid rgba(106, 33, 51, 0.2);
+  margin: 40px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.qr-container img {
+  max-width: 192px;
+  display: block;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 32px;
+  margin-top: 20px;
+  border: 1px solid var(--color-text);
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 19px;
+}
+
+
+.schedule-item {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+/* ==========================================================
+   Sections spacing
+   ========================================================== */
+section {
+  margin-bottom: 2em;
+  max-width: 740px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section.hero {
+  max-width: none;
+}
+
+section.photo-break {
+  max-width: none;
+  margin-bottom: 0;
+}
+
+.photo-break__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+}
+
+.photo-break__grid figure {
+  margin: 0;
+  overflow: hidden;
+  aspect-ratio: 2/3;
+}
+
+.photo-break__grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .photo-break__grid {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .photo-break__grid figure {
+    aspect-ratio: 1;
+  }
+}
+
+/* ==========================================================
+   RESPONSIVE — Mobile (no style overrides, just layout)
+   ========================================================== */
+@media (max-width: 768px) {
+  .page {
+    padding: 0 32px 180px;
+  }
+
+  .two-col {
+    flex-direction: column;
+    gap: 0.25em;
+  }
+
+  .two-col__label {
+    flex: none;
+  }
+
+  .gifts-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .gifts-text {
+    flex: none;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+  /* Hamburger visible */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Nav hidden by default */
+  .site-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--color-bg);
+    flex-direction: column;
+    gap: 0;
+    padding: 0 20px 16px;
+  }
+
+  .site-nav a {
+    padding: 8px 0;
+  }
+
+  /* Open state */
+  .site-header.menu-open .site-nav {
+    display: flex;
+  }
+
+  .site-header.menu-open .hamburger span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .site-header.menu-open .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+  .site-header.menu-open .hamburger span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+}
