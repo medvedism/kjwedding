@@ -136,6 +136,9 @@
   </main>
 
 <script>
+const heroText = document.querySelector('.hero-text');
+document.fonts.ready.then(() => heroText.classList.add('is-loaded'));
+
 const menuBtn = document.querySelector('.site-header__menu');
 
 menuBtn.addEventListener('click', () => {
