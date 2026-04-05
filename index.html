@@ -7,186 +7,151 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <header class="site-header">
     <div class="site-header__inner">
-      <p class="site-header__title"><strong>Joe <em>&amp;</em> Ksenia's Wedding</strong></p>
-      <button class="hamburger" aria-label="Menu" aria-expanded="false">
-        <span></span><span></span><span></span>
+      <p class="site-header__title">Joe &amp; Ksenia<br>2026</p>
+      <button class="site-header__menu" aria-label="Menu" aria-expanded="false">
+        <span class="menu-label-open">(ME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NU)</span>
+        <span class="menu-label-close">(CLO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SE)</span>
       </button>
-      <nav class="site-nav">
-        <a href="#location">Location</a>
-        <a href="#schedule">Schedule</a>
-        <a href="#travel">Travel &amp; Stay</a>
-        <a href="#dresscode">Dress Code</a>
-        <a href="#gifts">Gifts</a>
-        <a href="#rsvp">RSVP</a>
-      </nav>
     </div>
   </header>
 
-  <article class="page">
+  <nav class="site-nav">
+    <a href="#location">Location</a>
+    <a href="#schedule">Schedule</a>
+    <a href="#travel">Travel &amp; Stay</a>
+    <a href="#dresscode">Dress Code</a>
+    <a href="#gifts">Gifts</a>
+    <a href="#rsvp">RSVP</a>
+  </nav>
 
+  <main class="page">
+
+    <!-- Hero -->
     <section class="hero">
-      <h1 class="accent-heading hero-heading">We're so happy you're here.</h1>
-
-      <h1 class="accent-heading">On 21 June 2026, we'll be getting married at Hestercombe, surrounded by the gardens in early summer bloom.</h1>
-      <h1 class="accent-heading">It means so much to us to celebrate this day with the people we love, and we can't wait to gather everyone together in such a beautiful setting.</h1>
-    </section>
-
-    <section class="photo-break">
-      <div class="photo-break__grid photo-break__grid--2">
-        <figure><img src="images/welcome-photo-5.jpeg" alt="Joe and Ksenia"></figure>
-        <figure><img src="images/welcome-photo-4.jpeg" alt="Joe and Ksenia"></figure>
+      <img class="hero-photo" src="images/jk-polaroid.png" alt="Joe and Ksenia">
+      <div class="hero-text">
+        <p>On 21&nbsp;June&nbsp;2026,<br>we will be getting married at Hestercombe, surrounded by gardens in their early summer bloom.</p>
+        <p>It means so much to us to celebrate this day with the people we love, and we can't wait to gather everyone together in such a beautiful setting.</p>
+        <p>Here you'll find all the details you need for the wedding.</p>
       </div>
     </section>
 
     <!-- Location -->
-    <section id="location">
-      <h2 class="section-heading" style="margin-bottom: 0;">Location</h2>
-      <p class="location-subtitle"><em>Hestercombe House & Gardens</em></p>
-      <p>Set in the Somerset countryside, Hestercombe has evolved over centuries, shaped by different eras and hands. The house dates back to the 16th century, while the formal gardens were later designed in the early 1900s by Sir Edwin Lutyens and Gertrude Jekyll, whose vision brought structure, softness and colour together in a distinctly English way. Stone terraces, long vistas and carefully planted borders create a sense of calm that unfolds as you walk through the grounds.</p>
-      <p>We'll be married in the Orangery, surrounded by the gardens in early summer bloom, before gathering in the Hall for dinner and dancing. There will be plenty of time throughout the day to wander, explore the terraces and take in the views — we hope you'll enjoy discovering the house and gardens as much as we do.</p>
-      <figure class="wide-image">
-        <div class="video-embed">
-          <iframe src="https://player.vimeo.com/video/460119918?title=0&byline=0&portrait=0&color=6a2133" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-        </div>
-      </figure>
+    <section class="section" id="location">
+      <div class="section-header">
+        <p class="section-label">Location</p>
+        <h2 class="section-heading">Hestercombe House &amp; Gardens</h2>
+      </div>
+      <div class="video-embed">
+        <iframe src="https://player.vimeo.com/video/460119918?title=0&byline=0&portrait=0&color=6a2133" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div>
+        <p>Set in the Somerset countryside, Hestercombe has evolved over centuries, shaped by different eras and hands. The house dates back to the 16th&nbsp;century, while the formal gardens were later designed in the early 1900s by Sir&nbsp;Edwin&nbsp;Lutyens and Gertrude&nbsp;Jekyll, whose vision brought structure, softness and colour together in a distinctly English way. Stone terraces, long vistas and carefully planted borders create a sense of calm that unfolds as you walk through the grounds.</p>
+        <p>We'll be married in the Orangery, surrounded by the gardens in early summer bloom, before gathering in the Hall for dinner and dancing. There will be plenty of time throughout the day to wander, explore the terraces and take in the views&nbsp;— we hope you'll enjoy discovering the house and gardens as much as we do.</p>
+      </div>
     </section>
 
     <!-- Schedule -->
-    <section id="schedule">
+    <section class="section" id="schedule">
       <h2 class="section-heading">Schedule</h2>
-      <p class="schedule-item">13:00 &middot; Guests arrive at Hestercombe</p>
-      <p class="schedule-item">13:30 &middot; Ceremony in the Orangery</p>
-      <p class="schedule-item">14:15 &middot; Drinks and canap&eacute;s in the gardens</p>
-      <p class="schedule-item">16:00 &middot; Dinner in the Hall</p>
-      <p class="schedule-item">18:30 &middot; Speeches</p>
-      <p class="schedule-item">19:30 &middot; Evening celebrations begin</p>
-      <p class="schedule-item">22:30 &middot; Last orders</p>
-      <p class="schedule-item">23:00 &middot; Carriages</p>
+      <div class="schedule-list">
+        <p>13:00 &middot; Guests arrive at Hestercombe</p>
+        <p>13:30 &middot; Ceremony in the Orangery</p>
+        <p>14:15 &middot; Drinks and canap&eacute;s in the gardens</p>
+        <p>16:00 &middot; Dinner in the Hall</p>
+        <p>18:30 &middot; Speeches</p>
+        <p>19:30 &middot; Evening celebrations begin</p>
+        <p>22:30 &middot; Last orders</p>
+        <p>23:00 &middot; Carriages</p>
+      </div>
     </section>
 
     <!-- Travel & Stay -->
-    <section id="travel">
+    <section class="section" id="travel">
       <h2 class="section-heading">Travel &amp; Stay</h2>
 
-      <h3>Getting There</h3>
-      <p>Our wedding will take place at Hestercombe House and Gardens, just outside Taunton in Somerset:</p>
-      <ul>
-        <li>If you're driving, Hestercombe is around 15 minutes by car from Taunton town centre. There is parking available on site.</li>
-        <li>If you're going by train, Taunton railway station has direct trains from London Paddington (1h 45m), as well as connections from Bristol or Exeter. Taxis are readily available from the station.</li>
-      </ul>
-      <p>We recommend booking taxis in advance, particularly for the journey home in the evening. Local taxi companies include:</p>
-      <ul>
-        <li>Apple Taxis Taunton, +44 (0) 1823-333-333</li>
-        <li>Gemini Taxis, +44 (0) 1823-332-211</li>
-        <li>County Cars Taunton, +44 (0) 1823-444-444</li>
-      </ul>
-      <p>We suggest allowing a little extra time on arrival so you can enjoy the setting and find your way to the Orangery without rushing.</p>
+      <p class="section-subheading">&rarr; getting there</p>
+      <div>
+        <p>Our wedding will take place at Hestercombe House and Gardens, just outside Taunton in Somerset:</p>
+        <ul>
+          <li>If you're driving, Hestercombe is around 15&nbsp;minutes by car from Taunton town centre. There is parking available on site.</li>
+          <li>If you're going by train, Taunton railway station has direct trains from London Paddington (1h&nbsp;45m), as well as connections from Bristol or Exeter. Taxis are readily available from the station.</li>
+        </ul>
+        <p>We recommend booking taxis in advance, particularly for the journey home in the evening. Local taxi companies include:</p>
+        <ul>
+          <li>Apple Taxis Taunton, +44&nbsp;(0)&nbsp;1823-333-333</li>
+          <li>Gemini Taxis, +44&nbsp;(0)&nbsp;1823-332-211</li>
+          <li>County Cars Taunton, +44&nbsp;(0)&nbsp;1823-444-444</li>
+        </ul>
+        <p>We suggest allowing a little extra time on arrival so you can enjoy the setting and find your way to the Orangery without rushing.</p>
+      </div>
 
-      <h3>Staying Nearby</h3>
-      <p>There are several lovely places to stay in and around Taunton, from town-centre hotels to countryside inns and guesthouses.</p>
-      <p>Taunton offers the most convenient access, especially if you're travelling by train. For those who would prefer something more rural, there are beautiful options in the surrounding Somerset countryside.</p>
-      <p>We recommend booking accommodation early, as summer weekends can be busy.</p>
-      <figure class="wide-image">
-        <div class="video-embed">
-          <iframe src="https://www.google.com/maps/d/embed?mid=1IowEqe0gkeG1NnRmT5kmBEBmX_8kp0s" frameborder="0" allowfullscreen></iframe>
-        </div>
-      </figure>
-      <p><a href="https://www.google.com/maps/d/embed?mid=1IowEqe0gkeG1NnRmT5kmBEBmX_8kp0s" target="_blank" rel="noopener">View accommodation map on Google Maps</a></p>
+      <p class="section-subheading">&rarr; Staying Nearby</p>
+      <div>
+        <p>There are several lovely places to stay in and around Taunton, from town-centre hotels to countryside inns and guesthouses.</p>
+        <p>Taunton offers the most convenient access, especially if you're travelling by train. For those who would prefer something more rural, there are beautiful options in the surrounding Somerset countryside.</p>
+        <p>We recommend booking accommodation early, as summer weekends can be busy.</p>
+      </div>
+      <a href="https://www.google.com/maps/d/embed?mid=1IowEqe0gkeG1NnRmT5kmBEBmX_8kp0s" target="_blank" rel="noopener" class="btn">Accommodation map</a>
     </section>
 
     <!-- Dress Code -->
-    <section id="dresscode">
-      <h2 class="section-heading" style="margin-bottom: 0;">Dress Code</h2>
-      <p class="location-subtitle"><em>Floral Formal</em></p>
-      <p>We'd love you to dress up and feel your best. Think summer elegance — suits, dresses or tailored separates in soft florals and romantic tones.</p>
-      <p>If you'd like to take inspiration from the gardens, shades of pink, blue, soft yellow and deeper burgundy will feel beautifully at home.</p>
-      <p>As a small request, we kindly ask guests to <u>avoid wearing white</u> — that one's reserved for the bride!</p>
-      <p>Part of the day will be spent outdoors, so comfortable shoes for grass and garden paths are a good idea.</p>
+    <section class="section" id="dresscode">
+      <div class="section-header">
+        <p class="section-label">Dress Code</p>
+        <h2 class="section-heading">garden floral<br>formal</h2>
+      </div>
+      <div>
+        <p>We'd love you to dress up and feel your best. Think summer elegance&nbsp;— suits, dresses or tailored separates in soft florals and romantic tones.</p>
+        <p>If you'd like to take inspiration from the gardens, shades of pink, blue, soft yellow and deeper burgundy will feel beautifully at home.</p>
+        <p>As a small request, we kindly ask guests to <em>avoid wearing white</em>&nbsp;— that one's reserved for the bride!</p>
+        <p>Part of the day will be spent outdoors, so comfortable shoes for grass and garden paths are a good idea.</p>
+      </div>
     </section>
 
     <!-- Gifts -->
-    <section id="gifts">
+    <section class="section" id="gifts">
       <h2 class="section-heading">Gifts</h2>
-      <p>Your presence at our wedding is the greatest gift we could ask for&hellip; But if you would like to give something, a contribution towards our future together would mean a great deal to us.</p>
-      <div style="text-align: center;">
-        <div class="qr-container">
-          <img src="images/image.png" alt="Gift QR code">
-          <a href="https://prezola.com/buy/view/323477" target="_blank" rel="noopener" class="btn">View Gift List</a>
-        </div>
-      </div>
+      <p>Your presence at our wedding is the greatest gift we could ask for&hellip;&nbsp;But if you would like to give something, a contribution towards our future together would mean a great deal to us.</p>
+      <a href="https://prezola.com/buy/view/323477" target="_blank" rel="noopener" class="btn">Open gift list</a>
     </section>
 
     <!-- RSVP -->
-    <section id="rsvp">
+    <section class="section" id="rsvp">
       <h2 class="section-heading">RSVP</h2>
-      <div style="text-align: center;">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLScSrKu2plWKGHnZEO_8uHdWXgU0wisTSdto-ZoB89_A05liLg/viewform" target="_blank" rel="noopener" class="btn">Click here to RSVP</a>
-      </div>
+      <p>We can't wait to gather in such a wild and beautiful setting. Please let us know if you'll be with us.</p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScSrKu2plWKGHnZEO_8uHdWXgU0wisTSdto-ZoB89_A05liLg/viewform" target="_blank" rel="noopener" class="btn">Register here</a>
     </section>
 
-  </article>
+    <!-- Footer -->
+    <footer class="footer">
+      yours,<br>J&amp;K
+    </footer>
+
+  </main>
+
 <script>
-// Smooth scroll
-document.querySelectorAll('.site-nav a[href^="#"]').forEach(link => {
+const menuBtn = document.querySelector('.site-header__menu');
+
+menuBtn.addEventListener('click', () => {
+  const open = document.body.classList.toggle('menu-open');
+  menuBtn.setAttribute('aria-expanded', open);
+});
+
+document.querySelectorAll('.site-nav a').forEach(link => {
   link.addEventListener('click', e => {
     e.preventDefault();
-    // Close mobile menu if open
-    document.querySelector('.site-header').classList.remove('menu-open');
-    document.querySelector('.hamburger').setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('menu-open');
+    menuBtn.setAttribute('aria-expanded', 'false');
     const target = document.querySelector(link.getAttribute('href'));
-    if (!target) return;
-    const start = window.scrollY;
-    const end = target.getBoundingClientRect().top + start - 80;
-    const duration = 600;
-    const startTime = performance.now();
-    function step(now) {
-      const t = Math.min((now - startTime) / duration, 1);
-      const ease = t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
-      window.scrollTo(0, start + (end - start) * ease);
-      if (t < 1) requestAnimationFrame(step);
+    if (target) {
+      const y = target.getBoundingClientRect().top + window.scrollY - 120;
+      window.scrollTo({ top: y, behavior: 'smooth' });
     }
-    requestAnimationFrame(step);
   });
-});
-
-// Cycling color on hover for all links
-const hoverColors = ['#ff4c92', '#26b7dd', '#ff7d00'];
-let colorIndex = 0;
-document.querySelectorAll('a').forEach(link => {
-  link.addEventListener('mouseenter', () => {
-    link.style.color = hoverColors[colorIndex];
-    colorIndex = (colorIndex + 1) % hoverColors.length;
-  });
-  link.addEventListener('mouseleave', () => {
-    link.style.color = '';
-  });
-});
-
-// Button hover with cycling colors
-const btnColors = ['#ff4c92', '#26b7dd', '#ff7d00'];
-let btnColorIndex = 0;
-document.querySelectorAll('.btn').forEach(btn => {
-  btn.addEventListener('mouseenter', () => {
-    const color = btnColors[btnColorIndex];
-    btnColorIndex = (btnColorIndex + 1) % btnColors.length;
-    btn.style.background = color;
-    btn.style.color = '#fdf4df';
-    btn.style.borderColor = 'transparent';
-  });
-  btn.addEventListener('mouseleave', () => {
-    btn.style.background = '';
-    btn.style.color = '';
-    btn.style.borderColor = '';
-  });
-});
-
-// Hamburger toggle
-document.querySelector('.hamburger').addEventListener('click', function() {
-  const header = document.querySelector('.site-header');
-  const open = header.classList.toggle('menu-open');
-  this.setAttribute('aria-expanded', open);
 });
 </script>
 </body>

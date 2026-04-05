@@ -1,82 +1,45 @@
 /* ==========================================================
-   Joe & Ksenia's Wedding — Style Sheet
-
-   CUSTOMISATION: Change fonts and colours using these
-   CSS custom properties (variables) below.
+   Joe & Ksenia's Wedding v2 — Style Sheet
    ========================================================== */
 
-/* ==========================================================
-   Font faces
-   ========================================================== */
+/* --- Font Faces --- */
 @font-face {
-  font-family: 'Canela Text';
-  src: url('fonts/CanelaText-Light-Desktop.otf') format('opentype');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Canela Text';
-  src: url('fonts/CanelaText-Regular-Desktop.otf') format('opentype');
+  font-family: 'KTF Metro';
+  src: url('fonts/KTFMetro-Roman.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Canela Text';
-  src: url('fonts/CanelaText-RegularItalic-Desktop.otf') format('opentype');
+  font-family: 'CoFo Robert';
+  src: url('fonts/CoFo_Robert-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CoFo Robert';
+  src: url('fonts/CoFo_Robert-Regular_Italic.ttf') format('truetype');
   font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
 
-@font-face {
-  font-family: 'Canela Text';
-  src: url('fonts/CanelaText-Medium-Desktop.otf') format('opentype');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Canela Text';
-  src: url('fonts/CanelaText-Bold-Desktop.otf') format('opentype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
+/* --- Custom Properties --- */
 :root {
-  /* --- Fonts --- */
-  --font-body: 'Canela Text', Georgia, ui-serif, serif;
-  --font-heading: 'Canela Text', Georgia, ui-serif, serif;
-
-  /* --- Colours --- */
-  --color-text: #6a2133;
-  --color-pink: #ff4c92;
-  --color-blue: #26b7dd;
-  --color-orange: #ff7d00;
-  --color-bg: #fdf4df;
-  --color-link: inherit;
-  --color-hr: rgba(55, 53, 47, 0.09);
-  --color-muted: rgba(55, 53, 47, 0.6);
-
-  /* --- Layout --- */
-  --max-width: 1000px;
-  --spacing: 1.5rem;
+  --color-bg: #f2ebe4;
+  --color-text: #7f432c;
+  --color-btn-bg: rgba(127, 67, 44, 0.08);
+  --color-btn-border: rgba(127, 67, 44, 0.2);
+  --font-heading: 'KTF Metro', Georgia, serif;
+  --font-body: 'CoFo Robert', Georgia, serif;
 }
 
-/* ==========================================================
-   Reset & Base
-   ========================================================== */
+/* --- Reset --- */
 *, *::before, *::after {
   box-sizing: border-box;
-}
-
-html {
-  -webkit-print-color-adjust: exact;
 }
 
 html, body {
@@ -88,96 +51,9 @@ body {
   font-family: var(--font-body);
   color: var(--color-text);
   background: var(--color-bg);
-  font-size: 19px;
-  line-height: 1.5;
+  font-size: 18px;
+  line-height: 26px;
   -webkit-font-smoothing: antialiased;
-}
-
-/* ==========================================================
-   Page container
-   ========================================================== */
-.page {
-  max-width: var(--max-width);
-  margin: 2em auto;
-  padding: 0 var(--spacing);
-  padding-bottom: 180px;
-}
-
-/* ==========================================================
-   Typography
-   ========================================================== */
-h1, h2, h3 {
-  font-family: var(--font-heading);
-  letter-spacing: -0.01em;
-  line-height: 1.2;
-  font-weight: 400;
-}
-
-h1 { font-size: 56px; margin-top: 1.875rem; font-weight: 300; text-align: center; }
-h2 { font-size: 34px; margin-top: 120px; margin-bottom: 40px; font-weight: 400; }
-h3 {
-  font-size: 21px;
-  font-style: italic;
-  margin-bottom: 20px;
-  margin-top: 40px;
-  text-align: center;
-}
-
-.accent-heading {
-  color: var(--color-text);
-}
-
-.section-heading {
-  color: var(--color-text);
-  text-align: center;
-}
-
-p {
-  text-align: left;
-  margin-top: 0.5em;
-  margin-bottom: 1em;
-}
-
-a, a:visited {
-  color: var(--color-link);
-  text-decoration: underline;
-  text-decoration-thickness: 0.5px;
-  text-underline-offset: 4px;
-  text-decoration-color: rgba(0, 0, 0, 0.3);
-}
-
-hr {
-  background: transparent;
-  display: block;
-  width: 100%;
-  height: 1px;
-  visibility: visible;
-  border: none;
-  border-bottom: 1px solid var(--color-hr);
-  margin: 0.5em 0 1em;
-}
-
-u {
-  text-decoration: underline;
-  text-decoration-thickness: 0.5px;
-  text-underline-offset: 4px;
-  text-decoration-color: rgba(0, 0, 0, 0.3);
-}
-
-ul {
-  padding-inline-start: 1.7em;
-  margin-block-start: 0.6em;
-  margin-block-end: 0.6em;
-}
-
-ul > li {
-  list-style: disc;
-  padding-left: 0.1em;
-  margin-bottom: 0.3em;
-}
-
-strong {
-  font-weight: 500;
 }
 
 img {
@@ -186,118 +62,243 @@ img {
   display: block;
 }
 
-figure {
-  margin: 1.25em 0;
+/* --- Layout --- */
+.page {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 160px;
+  padding-top: 136px;
+  padding-bottom: 32px;
 }
 
-/* ==========================================================
-   Sticky Header
-   ========================================================== */
+/* --- Header --- */
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 100;
+  left: 0;
+  right: 0;
+  z-index: 101;
+  background: var(--color-bg);
+  padding: 32px 32px 24px;
+}
+
+.site-header::before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  height: 100px;
   background: var(--color-bg);
 }
 
 .site-header__inner {
-  max-width: var(--max-width);
+  max-width: 600px;
   margin: 0 auto;
-  padding: 16px var(--spacing);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
+  font-family: var(--font-heading);
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
 }
 
-.site-header__title {
-  font-size: 21px;
+.site-header__title,
+.site-header__menu {
   margin: 0;
 }
 
-.site-nav {
-  display: flex;
-  gap: 24px;
-  align-items: center;
-}
-
-.site-nav a {
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.site-nav a:hover {
-  opacity: 1;
-}
-
-/* Hamburger button — hidden on desktop */
-.hamburger {
-  display: none;
+/* --- Menu Button --- */
+.site-header__menu {
   background: none;
   border: none;
   cursor: pointer;
-  padding: 4px;
-  flex-direction: column;
-  gap: 5px;
+  font-family: var(--font-heading);
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--color-text);
+  text-align: center;
+  padding: 0;
 }
 
-.hamburger span {
-  display: block;
-  width: 24px;
-  height: 2px;
-  background: var(--color-text);
-  transition: transform 0.3s, opacity 0.3s;
+.menu-label-close {
+  display: none;
 }
 
-/* ==========================================================
-   Hero section
-   ========================================================== */
-.hero {
-  padding-top: 100px;
-  margin-bottom: 160px;
+body.menu-open .menu-label-open {
+  display: none;
 }
 
-.hero-heading {
-  margin-top: 0;
-  margin-bottom: 0.75em;
+body.menu-open .menu-label-close {
+  display: inline;
 }
 
-/* ==========================================================
-   Photo grid (3 columns)
-   ========================================================== */
-.photo-grid {
+/* --- Nav Overlay --- */
+.site-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background: rgba(242, 235, 228, 0.7);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
   display: flex;
-  gap: 46px;
-  margin: 1.5em 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 150ms ease-out;
 }
 
-.photo-grid figure {
-  flex: 1 1 0;
-  min-width: 0;
+.site-nav a {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+body.menu-open .site-nav {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+body.menu-open .site-header,
+body.menu-open .site-header::before {
+  background: transparent;
+}
+
+
+/* --- Section --- */
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  align-items: center;
+}
+
+/* --- Section Label (small text above heading) --- */
+.section-label {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  line-height: 26px;
+  text-align: center;
   margin: 0;
-  overflow: hidden;
 }
 
-.photo-grid img {
+/* --- Section Heading --- */
+.section-heading {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+}
+
+/* --- Label + Heading group (no gap between them) --- */
+.section-header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 2px;
+  text-align: center;
 }
 
-/* ==========================================================
-   Wide image
-   ========================================================== */
-.wide-image {
-  margin: 1.5em 0;
+/* --- Sub-heading (→ getting there) --- */
+.section-subheading {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
 }
 
-.wide-image img {
+/* --- Body Text --- */
+.section p,
+.section ul {
+  margin: 0;
   width: 100%;
-  border-radius: 2px;
 }
 
+.section p + p,
+.section p + ul,
+.section ul + p {
+  margin-top: 13px;
+}
+
+/* --- Hero --- */
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  align-items: center;
+}
+
+.hero-photo {
+  transform: rotate(-4deg);
+  width: 80%;
+  border-radius: 1px;
+}
+
+.hero-text {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.hero-text p {
+  margin: 0 0 25px;
+}
+
+.hero-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* --- Lists --- */
+ul {
+  padding-left: 27px;
+  margin: 0;
+}
+
+ul li {
+  list-style: disc;
+  margin-bottom: 8px;
+  line-height: 26px;
+}
+
+ul li:last-child {
+  margin-bottom: 0;
+}
+
+/* --- Schedule --- */
+.schedule-list p {
+  margin: 0 0 8px;
+  line-height: 26px;
+}
+
+.section .schedule-list p + p {
+  margin-top: 0;
+}
+
+.schedule-list p:last-child {
+  margin-bottom: 0;
+}
+
+/* --- Video Embed --- */
 .video-embed {
   position: relative;
+  width: 100%;
   padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
@@ -309,201 +310,38 @@ figure {
   left: 0;
   width: 100%;
   height: 100%;
-  border-radius: 2px;
+  border: 0;
 }
 
-/* ==========================================================
-   Two-column layout (label + content)
-   ========================================================== */
-.two-col {
-  display: flex;
-  gap: 46px;
-  margin: 1em 0;
+/* --- Map Image --- */
+.map-image {
+  width: 100%;
+  aspect-ratio: 329 / 185;
+  object-fit: contain;
 }
 
-.two-col__label {
-  flex: 0 0 25%;
-  min-width: 0;
-}
-
-.two-col__content {
-  flex: 1 1 0;
-  min-width: 0;
-}
-
-/* ==========================================================
-   Gifts row
-   ========================================================== */
-.gifts-row {
-  display: flex;
-  gap: 46px;
-  align-items: flex-start;
-}
-
-.gifts-text {
-  flex: 0 0 68.75%;
-}
-
-.gifts-image {
-  flex: 1 1 0;
-  min-width: 0;
-}
-
-.gifts-image img {
-  max-width: 192px;
-}
-
-/* ==========================================================
-   Schedule list
-   ========================================================== */
-.location-subtitle {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.qr-container {
-  display: inline-block;
-  padding: 20px;
-  border: 1px solid rgba(106, 33, 51, 0.2);
-  margin: 40px;
-  background: #ffffff;
-  text-align: center;
-}
-
-.qr-container img {
-  max-width: 192px;
-  display: block;
-}
-
+/* --- Button --- */
 .btn {
-  display: inline-block;
-  padding: 12px 32px;
-  margin-top: 20px;
-  border: 1px solid var(--color-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 14px 20px 16px;
+  background: var(--color-btn-bg);
+  border: 1px solid var(--color-btn-border);
+  border-radius: 4px;
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 26px;
   color: var(--color-text);
   text-decoration: none;
-  font-size: 19px;
+  cursor: pointer;
 }
 
-
-.schedule-item {
+/* --- Footer --- */
+.footer {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  line-height: 20px;
   text-align: center;
-  margin-top: 0;
-  margin-bottom: 0.5em;
-}
-
-/* ==========================================================
-   Sections spacing
-   ========================================================== */
-section {
-  margin-bottom: 2em;
-  max-width: 740px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-section.hero {
-  max-width: none;
-}
-
-section.photo-break {
-  max-width: none;
-  margin-bottom: 0;
-}
-
-.photo-break__grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4px;
-}
-
-.photo-break__grid figure {
-  margin: 0;
-  overflow: hidden;
-  aspect-ratio: 2/3;
-}
-
-.photo-break__grid img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-@media (max-width: 768px) {
-  .photo-break__grid {
-    grid-template-columns: 1fr;
-    gap: 4px;
-  }
-
-  .photo-break__grid figure {
-    aspect-ratio: 1;
-  }
-}
-
-/* ==========================================================
-   RESPONSIVE — Mobile (no style overrides, just layout)
-   ========================================================== */
-@media (max-width: 768px) {
-  .page {
-    padding: 0 32px 180px;
-  }
-
-  .two-col {
-    flex-direction: column;
-    gap: 0.25em;
-  }
-
-  .two-col__label {
-    flex: none;
-  }
-
-  .gifts-row {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .gifts-text {
-    flex: none;
-  }
-
-  h1 {
-    font-size: 34px;
-  }
-
-  /* Hamburger visible */
-  .hamburger {
-    display: flex;
-  }
-
-  /* Nav hidden by default */
-  .site-nav {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: var(--color-bg);
-    flex-direction: column;
-    gap: 0;
-    padding: 0 20px 16px;
-  }
-
-  .site-nav a {
-    padding: 8px 0;
-  }
-
-  /* Open state */
-  .site-header.menu-open .site-nav {
-    display: flex;
-  }
-
-  .site-header.menu-open .hamburger span:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
-  }
-  .site-header.menu-open .hamburger span:nth-child(2) {
-    opacity: 0;
-  }
-  .site-header.menu-open .hamburger span:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
-  }
 }
