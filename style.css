@@ -171,10 +171,10 @@ body.menu-open .site-nav {
   pointer-events: auto;
 }
 
-body.menu-open .site-header,
-body.menu-open .site-header::before {
-  background: transparent;
+body.menu-open {
+  overflow: hidden;
 }
+
 
 
 /* --- Section --- */
