@@ -85,14 +85,14 @@ img {
   padding: 32px 32px 24px;
 }
 
-.site-header::before {
-  content: '';
-  position: absolute;
-  bottom: 100%;
+.top-cover {
+  position: fixed;
+  top: -200px;
   left: 0;
   right: 0;
-  height: 100px;
+  height: 200px;
   background: var(--color-bg);
+  z-index: 100;
 }
 
 .site-header__inner {
@@ -344,4 +344,9 @@ ul li:last-child {
   font-size: 14px;
   line-height: 20px;
   text-align: center;
+}
+
+a[x-apple-data-detectors] {
+  color: inherit !important;
+  text-decoration: none !important;
 }
