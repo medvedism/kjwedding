@@ -83,7 +83,8 @@ img {
   right: 0;
   z-index: 101;
   background: var(--color-bg);
-  padding: 32px 32px 24px;
+  padding: 232px 32px 24px;
+  transform: translateY(-200px);
 }
 
 .top-cover {
@@ -111,6 +112,15 @@ img {
 .site-header__title,
 .site-header__menu {
   margin: 0;
+}
+
+.site-header__title {
+  text-decoration: none;
+  color: inherit;
+}
+
+body.menu-open .site-header__title {
+  pointer-events: none;
 }
 
 /* --- Menu Button --- */
@@ -146,7 +156,7 @@ body.menu-open .menu-label-close {
   right: 0;
   bottom: 0;
   z-index: 99;
-  background: rgba(242, 235, 228, 0.7);
+  background: rgba(242, 235, 228, 0.8);
   backdrop-filter: blur(50px);
   -webkit-backdrop-filter: blur(50px);
   display: flex;
@@ -254,7 +264,7 @@ body.menu-open {
 }
 
 @keyframes hero-fade-in {
-  from { opacity: 0; transform: rotate(-4deg) translateY(20px); }
+  from { opacity: 0; transform: rotate(-4.5deg) translateY(20px); }
   to   { opacity: 1; transform: rotate(-4deg) translateY(0); }
 }
 
@@ -298,6 +308,10 @@ ul li:last-child {
 }
 
 /* --- Schedule --- */
+.schedule-list {
+  text-align: center;
+}
+
 .schedule-list p {
   margin: 0 0 8px;
   line-height: 26px;

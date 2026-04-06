@@ -2,8 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="format-detection" content="telephone=no">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Joe & Ksenia's Wedding</title>
+  <title>Joe & Ksenia</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/favicon@apple.png">
+  <meta name="description" content="On 21 June 2026, we will be getting married at Hestercombe, surrounded by gardens in their early summer bloom. Here you'll find all the details you need for the wedding.">
+  <meta property="og:title" content="Joe & Ksenia">
+  <meta property="og:description" content="On 21 June 2026, we will be getting married at Hestercombe, surrounded by gardens in their early summer bloom. Here you'll find all the details you need for the wedding.">
+  <meta property="og:url" content="https://www.joeandksenia.com">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/social-preview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="images/social-preview.png">
   <link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
@@ -12,7 +23,7 @@
 
   <header class="site-header">
     <div class="site-header__inner">
-      <p class="site-header__title">Joe &amp; Ksenia<br>2026</p>
+      <a href="#" class="site-header__title">Joe &amp; Ksenia<br>2026</a>
       <button class="site-header__menu" aria-label="Menu" aria-expanded="false">
         <span class="menu-label-open">(ME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NU)</span>
         <span class="menu-label-close">(CLO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SE)</span>
@@ -33,7 +44,7 @@
 
     <!-- Hero -->
     <section class="hero">
-      <img class="hero-photo" src="images/jk-polaroid.png" alt="Joe and Ksenia">
+      <img class="hero-photo" src="images/jk-polaroid-2.png" alt="Joe and Ksenia">
       <div class="hero-text">
         <p>On 21&nbsp;June&nbsp;2026,<br>we will be getting married at Hestercombe, surrounded by gardens in their early summer bloom.</p>
         <p>It means so much to us to celebrate this day with the people we love, and we can't wait to gather everyone together in such a beautiful setting.</p>
@@ -45,7 +56,7 @@
     <section class="section" id="location">
       <div class="section-header">
         <p class="section-label">Location</p>
-        <h2 class="section-heading">Hestercombe House &amp; Gardens</h2>
+        <h2 class="section-heading">Hestercombe House&nbsp;&amp;&nbsp;Gardens</h2>
       </div>
       <div class="video-embed">
         <iframe src="https://player.vimeo.com/video/460119918?title=0&byline=0&portrait=0&color=6a2133" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
@@ -75,7 +86,7 @@
     <section class="section" id="travel">
       <h2 class="section-heading">Travel &amp; Stay</h2>
 
-      <p class="section-subheading">&rarr; getting there</p>
+      <p class="section-subheading">&rarr; Getting There &larr;</p>
       <div>
         <p>Our wedding will take place at Hestercombe House and Gardens, just outside Taunton in Somerset:</p>
         <ul>
@@ -84,14 +95,13 @@
         </ul>
         <p>We recommend booking taxis in advance, particularly for the journey home in the evening. Local taxi companies include:</p>
         <ul>
-          <li>Apple Taxis Taunton, +44&nbsp;(0)&nbsp;1823-333-333</li>
-          <li>Gemini Taxis, +44&nbsp;(0)&nbsp;1823-332-211</li>
-          <li>County Cars Taunton, +44&nbsp;(0)&nbsp;1823-444-444</li>
+          <li>Apple Taxis, 07400&#8209;916902</li>
+          <li>Gemini Taxis, 01823&#8209;248248</li>
         </ul>
         <p>We suggest allowing a little extra time on arrival so you can enjoy the setting and find your way to the Orangery without rushing.</p>
       </div>
 
-      <p class="section-subheading">&rarr; Staying Nearby</p>
+      <p class="section-subheading">&bull; Staying Nearby &bull;</p>
       <div>
         <p>There are several lovely places to stay in and around Taunton, from town-centre hotels to countryside inns and guesthouses.</p>
         <p>Taunton offers the most convenient access, especially if you're travelling by train. For those who would prefer something more rural, there are beautiful options in the surrounding Somerset countryside.</p>
@@ -117,7 +127,7 @@
     <!-- Gifts -->
     <section class="section" id="gifts">
       <h2 class="section-heading">Gifts</h2>
-      <p>Your presence at our wedding is the greatest gift we could ask for&hellip;&nbsp;But if you would like to give something, a contribution towards our future together would mean a great deal to us.</p>
+      <p>Your presence at our wedding is the greatest gift we could ask for&hellip;&nbsp;But if you would like to give something, a contribution towards our future together would mean a great deal to&nbsp;us.</p>
       <a href="https://prezola.com/buy/view/323477" target="_blank" rel="noopener" class="btn">Open gift list</a>
     </section>
 
@@ -138,6 +148,11 @@
 <script>
 const heroText = document.querySelector('.hero-text');
 document.fonts.ready.then(() => heroText.classList.add('is-loaded'));
+
+document.querySelector('.site-header__title').addEventListener('click', e => {
+  e.preventDefault();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
 
 const menuBtn = document.querySelector('.site-header__menu');
 
