@@ -46,6 +46,7 @@
 html, body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 body {
@@ -365,13 +366,20 @@ ul li:last-child {
 
 @media (max-width: 600px) {
   .section-photo,
-  .hero-photo,
+  .hero-photo {
+    width: 80vw;
+  }
+  .photo-pair {
+    width: 100vw;
+    margin-left: -32px;
+  }
   .photo-pair__left,
   .photo-pair__right {
     width: 80vw;
   }
   .photo-pair__right {
-    margin-top: 48.7vw;
+    margin-left: -32vw;
+    margin-top: 49vw;
   }
 }
 
